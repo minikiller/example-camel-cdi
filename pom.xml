@@ -11,7 +11,7 @@
     <fabric8.label.container>java</fabric8.label.container>
     <fabric8.iconRef>icons/camel.svg</fabric8.iconRef>
     <version.maven-bundle-plugin>2.3.7</version.maven-bundle-plugin>
-    <docker.registryPrefix>/</docker.registryPrefix>
+    <docker.registryPrefix></docker.registryPrefix>
     <jube.version>2.0.29</jube.version>
     <fabric8.version>2.0.29</fabric8.version>
     <docker.image>${docker.registryPrefix}fabric8/${project.artifactId}:${project.version}</docker.image>

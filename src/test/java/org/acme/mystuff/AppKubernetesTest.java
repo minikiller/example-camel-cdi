@@ -38,7 +38,7 @@ public class AppKubernetesTest {
 
     @Test
     public void testAppProvisionsRunningPods() throws Exception {
-        assertThat(client).replicationController("example-java-camel-cdi-controller").isNotNull();
+        assertThat(client).replicationController("example-camel-cdi-controller").isNotNull();
         assertThat(client).pods()
                 .runningStatus()
                 .filterNamespace(session.getNamespace())

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+         xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <modelVersion>4.0.0</modelVersion>
   <groupId>io.fabric8.examples</groupId>
   <artifactId>example-camel-cdi</artifactId>
@@ -31,21 +32,27 @@
     <docker.assemblyDescriptorRef>artifact-with-dependencies</docker.assemblyDescriptorRef>
     <maven.compiler.source>1.7</maven.compiler.source>
   </properties>
-  
-    <distributionManagement>
-      <repository>
-        <id>oss-sonatype-staging</id>
-        <name>Sonatype Staging Repository</name>
-        <url>https://oss.sonatype.org/service/local/staging/deploy/maven2</url>
-      </repository>
-      <snapshotRepository>
-        <id>oss-sonatype-snapshots</id>
-        <name>OSS Sonatype Nexus Snapshots</name>
-        <url>https://oss.sonatype.org/content/repositories/snapshots</url>
-      </snapshotRepository>
-    </distributionManagement>
 
-  
+  <distributionManagement>
+    <repository>
+      <id>oss-sonatype-staging</id>
+      <name>Sonatype Staging Repository</name>
+      <url>https://oss.sonatype.org/service/local/staging/deploy/maven2</url>
+    </repository>
+    <snapshotRepository>
+      <id>oss-sonatype-snapshots</id>
+      <name>OSS Sonatype Nexus Snapshots</name>
+      <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+    </snapshotRepository>
+  </distributionManagement>
+
+  <scm>
+    <connection>scm:git:git@github.com:fabric8io/example-camel-cdi.git</connection>
+    <developerConnection>scm:git:git@github.com:fabric8io/example-camel-cdi.git</developerConnection>
+    <url>http://github.com/fabric8io/example-camel-cdi/</url>
+    <tag>example-camel-cdi-1.0.0</tag>
+  </scm>
+
   <dependencyManagement>
     <dependencies>
       <dependency>
@@ -291,10 +298,10 @@
       </properties>
     </profile>
     <profile>
-        <id>ts.kube</id>
-        <properties>
-            <testExclusionPattern>**/*ExcludedTest.java</testExclusionPattern>
-        </properties>
+      <id>ts.kube</id>
+      <properties>
+        <testExclusionPattern>**/*ExcludedTest.java</testExclusionPattern>
+      </properties>
     </profile>
   </profiles>
 </project>

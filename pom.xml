@@ -17,20 +17,21 @@
     <skipTests>false</skipTests>
     <testExclusionPattern>**/*KubernetesTest.java</testExclusionPattern>
 
-    <jube.version>2.0.29</jube.version>
-    <fabric8.version>2.0.29</fabric8.version>
+    <jube.version>2.0.47</jube.version>
+    <fabric8.version>2.0.47</fabric8.version>
     <dockerimage>${docker.registryPrefix}fabric8/${project.artifactId}:${project.version}</dockerimage>
     <docker.image>${dockerimage}</docker.image>
     <maven.compiler.target>1.7</maven.compiler.target>
     <docker.from>fabric8/java</docker.from>
     <docker.port.container.jolokia>8778</docker.port.container.jolokia>
     <fabric8.label.group>quickstarts</fabric8.label.group>
-    <camel.version>2.14.1</camel.version>
+    <camel.version>2.15.2</camel.version>
     <docker.env.MAIN>org.apache.camel.cdi.Main</docker.env.MAIN>
     <version.compiler.plugin>2.3.1</version.compiler.plugin>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <docker.assemblyDescriptorRef>artifact-with-dependencies</docker.assemblyDescriptorRef>
     <maven.compiler.source>1.7</maven.compiler.source>
+    <docker.maven.plugin.version>0.11.3</docker.maven.plugin.version>
   </properties>
 
   <distributionManagement>
@@ -65,7 +66,7 @@
       <dependency>
         <groupId>org.apache.camel</groupId>
         <artifactId>camel-netty4-http</artifactId>
-        <version>2.14.1</version>
+        <version>${camel.version}</version>
       </dependency>
     </dependencies>
   </dependencyManagement>
@@ -163,7 +164,7 @@
       <plugin>
         <groupId>org.jolokia</groupId>
         <artifactId>docker-maven-plugin</artifactId>
-        <version>0.11.1</version>
+        <version>${docker.maven.plugin.version}</version>
         <configuration>
           <images>
             <image>
@@ -225,7 +226,7 @@
           <plugin>
             <groupId>org.jolokia</groupId>
             <artifactId>docker-maven-plugin</artifactId>
-            <version>0.11.1</version>
+            <version>${docker.maven.plugin.version}</version>
             <executions>
               <execution>
                 <phase>package</phase>
@@ -245,7 +246,7 @@
           <plugin>
             <groupId>org.jolokia</groupId>
             <artifactId>docker-maven-plugin</artifactId>
-            <version>0.11.1</version>
+            <version>${docker.maven.plugin.version}</version>
             <executions>
               <execution>
                 <phase>package</phase>

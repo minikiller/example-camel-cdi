@@ -279,15 +279,6 @@
                 </goals>
               </execution>
             </executions>
-            <dependencies>
-              <dependency>
-                <groupId>io.fabric8.jube.images.fabric8</groupId>
-                <artifactId>java</artifactId>
-                <version>${jube.version}</version>
-                <type>zip</type>
-                <classifier>image</classifier>
-              </dependency>
-            </dependencies>
           </plugin>
         </plugins>
       </build>

@@ -1,0 +1,13 @@
+---
+pipeline: "workflows/maven/BuildImage/Jenkinsfile"
+buildName: "example-camel-cdi-new"
+codeReview: false
+links:
+  Backlog: "http://taiga.apps.kalix.com/project/admin-example-camel-cdi-new/backlog"
+  Current: "http://172.30.155.194:80/kubernetes/pods?namespace=develop"
+  Git: "https://github.com/minikiller/example-camel-cdi.git"
+  Job: "http://jenkins.apps.kalix.com/job/example-camel-cdi-new"
+  Team: "http://taiga.apps.kalix.com/project/admin-example-camel-cdi-new/team"
+environments:
+  Current: "develop"
+useLocalFlow: true
